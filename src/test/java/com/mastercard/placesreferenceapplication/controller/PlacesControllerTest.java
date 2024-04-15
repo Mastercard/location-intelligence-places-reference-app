@@ -42,13 +42,6 @@ public class PlacesControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @Test
-    public void testIndexPage() throws Exception {
-        mvc.perform(get("/")
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED))
-                .andExpect(status().isOk())
-                .andExpect(model().attributeHasNoErrors());
-    }
 
     @Test
     public void testMerchantCategoryCodes_successfulRequest() throws Exception {

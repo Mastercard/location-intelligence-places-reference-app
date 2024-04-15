@@ -34,14 +34,7 @@
 This project showcases retrieving places, merchant category codes, and merchant industry codes using the [Places API](https://developer.mastercard.com/places-v2/documentation/).
 This application illustrates connecting to the Places API using Mastercard's OAuth library, and an OpenAPI generated client.
 
-An optional dependency is a [Google Maps Key](https://developers.google.com/maps/gmp-get-started). 
-If you don't add a Google API key, you'll see an alert when the page loads and "For Development" over the map. This is normal and allows you to see the program without a key in development mode.
-
 When you get to the part about adding APIs, you will need to add the following APIs:
-
-- Maps JavaScript API
-
-See pricing [here](https://developers.google.com/maps/documentation/javascript/usage-and-billing). At the time of writing users are offered a $200 credit each month and the API costs $7 / 1000 Requests.
 
 ### Compatibility <a name="compatibility"></a>
  * [Java 8](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html) or later
@@ -90,15 +83,13 @@ A tutorial can be found [here](https://developer.mastercard.com/places-v2/tutori
 `mastercard.keystore.alias=keyalias`, this is the default value of key alias. If it is modified, use the updated one from keys section in [Mastercard Developers](https://developer.mastercard.com/dashboard).
 `mastercard.keystore.pass=keystorepassword`, this is the default value of key alias. If it is modified, use the updated one from keys section in [Mastercard Developers](https://developer.mastercard.com/dashboard).
 
-`google.maps.api.key`, *OPTIONAL* if you want to show without error messages, just place your api key here.
-
 ### Build and Execute <a name="build-and-execute"> </a>
 1. Run `mvn clean install` from the root of the project directory.
     * When install is run, the [OpenAPI Generator plugin](#integrating-with-openapi-generator) will generate the sources for connecting to the Places API.
 2. run `java -jar target/location-intelligence-places-reference-app-X.X.X.jar` to start the project.
     - **Notice**: Replace `X` with version of the reference app.
     - **Example**: `java -jar target/location-intelligence-places-reference-app-1.0.0.jar`
-3. Navigate to `http://localhost:8080/` in your browser.
+3. Call any of the apis defined in the controller to http://localhost:8080/places/` using your favorite tool.
 
 ### Reference Application Usage <a name="reference-application-usage"></a>
 - Use the map to see locations in the sandbox.
